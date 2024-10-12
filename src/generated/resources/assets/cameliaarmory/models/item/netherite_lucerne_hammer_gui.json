@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "cameliaarmory:item/netherite_lucerne_hammer_gui"
+  }
+}

@@ -8,9 +8,10 @@ import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import org.hiedacamellia.cameliaarmory.CameliaArmory;
+import org.hiedacamellia.cameliaarmory.core.entry.MutiModelsItem;
 import org.hiedacamellia.cameliaarmory.registries.CAItem;
-import org.hiedacamellia.camellialib.core.data.model.AutoItemModelProvider;
 
+import java.util.Collection;
 import java.util.stream.Collectors;
 
 public class CAItemModelProvider extends ItemModelProvider {
@@ -23,18 +24,21 @@ public class CAItemModelProvider extends ItemModelProvider {
             if (!(item instanceof BlockItem)) {
                 String path = BuiltInRegistries.ITEM.getKey(item).getPath();
                 this.singleTexture(path, this.mcLoc("item/generated"), "layer0", this.modLoc("item/" + path));
-            }});
+            }
+        });
         this.getKnownGuiItems().forEach((item) -> {
             if (!(item instanceof BlockItem)) {
                 String path = BuiltInRegistries.ITEM.getKey(item).getPath();
-                //this.singleTexture(path, this.mcLoc("item/generated"), "layer0", this.modLoc("item/" + path+"_gui"));
+                this.singleTexture(path + "_gui", this.mcLoc("item/generated"), "layer0", this.modLoc("item/" + path + "_gui"));
                 this.singleTexture(path, this.mcLoc("item/generated"), "layer0", this.modLoc("item/" + path));
-            }});
+            }
+        });
     }
 
     public Iterable<Item> getKnownItems() {
         return CAItem.ITEMS.getEntries().stream().map(DeferredHolder::get).collect(Collectors.toSet());
     }
+
     public Iterable<Item> getKnownGuiItems() {
         return CAItem.ITEM_WITH_GUI.getEntries().stream().map(DeferredHolder::get).collect(Collectors.toSet());
     }
