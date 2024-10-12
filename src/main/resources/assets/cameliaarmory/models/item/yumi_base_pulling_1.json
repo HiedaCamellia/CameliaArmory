@@ -1,0 +1,6 @@
+{
+    "parent": "cameliaarmory:item/yumi_base",
+    "textures": {
+        "layer0": "cameliaarmory:item/yumi_pulling_1"
+    }
+}

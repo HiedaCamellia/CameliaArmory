@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "cameliaarmory:item/yumi_gui"
+        "layer0": "cameliaarmory:item/yumi"
     }
 }

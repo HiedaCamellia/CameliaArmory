@@ -1,0 +1,6 @@
+{
+    "parent": "cameliaarmory:item/england_longbow_base",
+    "textures": {
+        "layer0": "cameliaarmory:item/england_longbow_pulling_1"
+    }
+}

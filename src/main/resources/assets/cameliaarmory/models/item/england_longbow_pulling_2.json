@@ -1,6 +1,18 @@
 {
-    "parent": "cameliaarmory:item/england_longbow",
-    "textures": {
-        "layer0": "cameliaarmory:item/england_longbow_pulling_2"
+    "parent": "neoforge:item/default",
+    "loader": "neoforge:separate_transforms",
+    "base": {
+        "parent": "cameliaarmory:item/england_longbow_base_pulling_2"
+    },
+    "perspectives": {
+        "gui": {
+            "parent": "cameliaarmory:item/england_longbow_gui_pulling_2"
+        },
+        "ground": {
+            "parent": "cameliaarmory:item/england_longbow_gui_pulling_2"
+        },
+        "fixed": {
+            "parent": "cameliaarmory:item/england_longbow_gui_pulling_2"
+        }
     }
 }

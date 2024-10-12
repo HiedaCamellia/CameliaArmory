@@ -1,6 +1,18 @@
 {
-    "parent": "cameliaarmory:item/yumi",
-    "textures": {
-        "layer0": "cameliaarmory:item/yumi_pulling_0"
+    "parent": "neoforge:item/default",
+    "loader": "neoforge:separate_transforms",
+    "base": {
+        "parent": "cameliaarmory:item/yumi_base_pulling_0"
+    },
+    "perspectives": {
+        "gui": {
+            "parent": "cameliaarmory:item/yumi_gui_pulling_0"
+        },
+        "ground": {
+            "parent": "cameliaarmory:item/yumi_gui_pulling_0"
+        },
+        "fixed": {
+            "parent": "cameliaarmory:item/yumi_gui_pulling_0"
+        }
     }
 }

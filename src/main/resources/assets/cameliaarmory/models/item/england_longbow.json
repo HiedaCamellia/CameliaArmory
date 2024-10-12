@@ -1,7 +1,19 @@
 {
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "cameliaarmory:item/england_longbow"
+    "parent": "neoforge:item/default",
+    "loader": "neoforge:separate_transforms",
+    "base": {
+        "parent": "cameliaarmory:item/england_longbow_base"
+    },
+    "perspectives": {
+        "gui": {
+            "parent": "cameliaarmory:item/england_longbow_gui"
+        },
+        "ground": {
+            "parent": "cameliaarmory:item/england_longbow_gui"
+        },
+        "fixed": {
+            "parent": "cameliaarmory:item/england_longbow_gui"
+        }
     },
     "display": {
         "thirdperson_righthand": {
