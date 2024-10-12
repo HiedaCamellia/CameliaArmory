@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "cameliaarmory:item/wooden_lucerne_hammer_gui"
+    "layer0": "cameliaarmory:item/wooden_lucerne_hammer"
   }
 }

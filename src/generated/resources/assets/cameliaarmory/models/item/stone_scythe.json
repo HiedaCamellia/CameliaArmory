@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "cameliaarmory:item/stone_scythe_gui"
+    "layer0": "cameliaarmory:item/stone_scythe"
   }
 }

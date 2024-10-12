@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "cameliaarmory:item/golden_scythe_gui"
+    "layer0": "cameliaarmory:item/golden_scythe"
   }
 }
