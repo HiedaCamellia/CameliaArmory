@@ -8,10 +8,8 @@ import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import org.hiedacamellia.cameliaarmory.CameliaArmory;
-import org.hiedacamellia.cameliaarmory.core.entry.MutiModelsItem;
 import org.hiedacamellia.cameliaarmory.registries.CAItem;
 
-import java.util.Collection;
 import java.util.stream.Collectors;
 
 public class CAItemModelProvider extends ItemModelProvider {
@@ -30,7 +28,7 @@ public class CAItemModelProvider extends ItemModelProvider {
             if (!(item instanceof BlockItem)) {
                 String path = BuiltInRegistries.ITEM.getKey(item).getPath();
                 this.singleTexture(path + "_gui", this.mcLoc("item/generated"), "layer0", this.modLoc("item/" + path + "_gui"));
-                this.singleTexture(path, this.mcLoc("item/generated"), "layer0", this.modLoc("item/" + path));
+                this.singleTexture(path + "_base", this.mcLoc("item/generated"), "layer0", this.modLoc("item/" + path));
             }
         });
     }

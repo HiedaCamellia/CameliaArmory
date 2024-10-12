@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:item/generated",
+  "loader": "neoforge:separate_transforms",
+  "base": {
+    "parent": "cameliaarmory:item/wooden_spear_base"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "cameliaarmory:item/wooden_spear_gui"
+    }
+  }
+}
