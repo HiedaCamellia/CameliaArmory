@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "org.hiedacamellia.cameliaarmory.core.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "refmap": "cameliaarmory.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+    "ItemPropertiesMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
