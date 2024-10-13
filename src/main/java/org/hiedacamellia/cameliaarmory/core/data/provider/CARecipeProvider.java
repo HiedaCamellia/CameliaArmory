@@ -300,7 +300,7 @@ public class CARecipeProvider extends RecipeProvider {
 
     }
 
-    public List<ItemLike> getItemList(Map<String, DeferredItem<SwordItemWithTooltip>> map) {
+    public List<ItemLike> getItemList(Map<String, DeferredItem<Item>> map) {
         List<ItemLike> items = new ArrayList<>();
         CAItem.tiers.forEach((tier)->{
             items.add(map.get(tier).get());
