@@ -4,9 +4,15 @@
   "base": {
     "parent": "cameliaarmory:item/golden_claymore_base"
   },
-  "perspectives": {
-    "gui": {
-      "parent": "cameliaarmory:item/golden_claymore_gui"
+    "perspectives": {
+        "gui": {
+            "parent": "cameliaarmory:item/golden_claymore_gui"
+        },
+        "ground": {
+            "parent": "cameliaarmory:item/golden_claymore_gui"
+        },
+        "fixed": {
+            "parent": "cameliaarmory:item/golden_claymore_gui"
+        }
     }
-  }
 }

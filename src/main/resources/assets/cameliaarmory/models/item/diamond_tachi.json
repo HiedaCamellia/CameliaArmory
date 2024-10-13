@@ -4,9 +4,15 @@
   "base": {
     "parent": "cameliaarmory:item/diamond_tachi_base"
   },
-  "perspectives": {
-    "gui": {
-      "parent": "cameliaarmory:item/diamond_tachi_gui"
+    "perspectives": {
+        "gui": {
+            "parent": "cameliaarmory:item/diamond_tachi_gui"
+        },
+        "ground": {
+            "parent": "cameliaarmory:item/diamond_tachi_gui"
+        },
+        "fixed": {
+            "parent": "cameliaarmory:item/diamond_tachi_gui"
+        }
     }
-  }
 }

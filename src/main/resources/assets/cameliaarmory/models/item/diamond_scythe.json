@@ -4,9 +4,15 @@
   "base": {
     "parent": "cameliaarmory:item/diamond_scythe_base"
   },
-  "perspectives": {
-    "gui": {
-      "parent": "cameliaarmory:item/diamond_scythe_gui"
+    "perspectives": {
+        "gui": {
+            "parent": "cameliaarmory:item/diamond_scythe_gui"
+        },
+        "ground": {
+            "parent": "cameliaarmory:item/diamond_scythe_gui"
+        },
+        "fixed": {
+            "parent": "cameliaarmory:item/diamond_scythe_gui"
+        }
     }
-  }
 }

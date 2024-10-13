@@ -4,9 +4,15 @@
   "base": {
     "parent": "cameliaarmory:item/netherite_lucerne_hammer_base"
   },
-  "perspectives": {
-    "gui": {
-      "parent": "cameliaarmory:item/netherite_lucerne_hammer_gui"
+    "perspectives": {
+        "gui": {
+            "parent": "cameliaarmory:item/netherite_lucerne_hammer_gui"
+        },
+        "ground": {
+            "parent": "cameliaarmory:item/netherite_lucerne_hammer_gui"
+        },
+        "fixed": {
+            "parent": "cameliaarmory:item/netherite_lucerne_hammer_gui"
+        }
     }
-  }
 }

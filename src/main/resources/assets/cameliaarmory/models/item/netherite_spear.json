@@ -4,9 +4,15 @@
   "base": {
     "parent": "cameliaarmory:item/netherite_spear_base"
   },
-  "perspectives": {
-    "gui": {
-      "parent": "cameliaarmory:item/netherite_spear_gui"
+    "perspectives": {
+        "gui": {
+            "parent": "cameliaarmory:item/netherite_spear_gui"
+        },
+        "ground": {
+            "parent": "cameliaarmory:item/netherite_spear_gui"
+        },
+        "fixed": {
+            "parent": "cameliaarmory:item/netherite_spear_gui"
+        }
     }
-  }
 }

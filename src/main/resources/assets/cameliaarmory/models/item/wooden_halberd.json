@@ -4,9 +4,15 @@
   "base": {
     "parent": "cameliaarmory:item/wooden_halberd_base"
   },
-  "perspectives": {
-    "gui": {
-      "parent": "cameliaarmory:item/wooden_halberd_gui"
+    "perspectives": {
+        "gui": {
+            "parent": "cameliaarmory:item/wooden_halberd_gui"
+        },
+        "ground": {
+            "parent": "cameliaarmory:item/wooden_halberd_gui"
+        },
+        "fixed": {
+            "parent": "cameliaarmory:item/wooden_halberd_gui"
+        }
     }
-  }
 }

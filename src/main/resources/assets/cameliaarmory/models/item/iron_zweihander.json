@@ -4,9 +4,15 @@
   "base": {
     "parent": "cameliaarmory:item/iron_zweihander_base"
   },
-  "perspectives": {
-    "gui": {
-      "parent": "cameliaarmory:item/iron_zweihander_gui"
+    "perspectives": {
+        "gui": {
+            "parent": "cameliaarmory:item/iron_zweihander_gui"
+        },
+        "ground": {
+            "parent": "cameliaarmory:item/iron_zweihander_gui"
+        },
+        "fixed": {
+            "parent": "cameliaarmory:item/iron_zweihander_gui"
+        }
     }
-  }
 }

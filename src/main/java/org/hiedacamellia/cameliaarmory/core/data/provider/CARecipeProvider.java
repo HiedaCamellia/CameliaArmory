@@ -224,6 +224,22 @@ public class CARecipeProvider extends RecipeProvider {
 
 
         TieredShapedRecipeBuilder.defaultTiered(RecipeCategory.COMBAT,
+                        getItemList(CAItem.ZWEIHANDER))
+                .pattern(" T ")
+                .pattern("FT ")
+                .pattern(" S ")
+                .define('S', Items.STICK)
+                .define('F', Items.STRING)
+                .unlockedBy("has_stick",has(Items.STICK))
+                .save(output, CameliaArmory.perfix("zweihander"));
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.of(CAItem.ZWEIHANDER.get("diamond")),
+                        Ingredient.of(Items.NETHERITE_INGOT),RecipeCategory.COMBAT,CAItem.ZWEIHANDER.get("netherite").get())
+                .unlocks("has_stick",has(Items.STICK))
+                .save(output, CameliaArmory.perfix("zweihander_netherite"));
+
+
+        TieredShapedRecipeBuilder.defaultTiered(RecipeCategory.COMBAT,
                         List.of(CAItem.WOODEN_CLUB,CAItem.STUDDED_CLUB
                                 ,CAItem.SPINY_MAUL.get("iron"),CAItem.SPINY_MAUL.get("golden"),CAItem.SPINY_MAUL.get("diamond")))
                 .pattern(" ST")

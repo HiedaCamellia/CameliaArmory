@@ -4,9 +4,15 @@
   "base": {
     "parent": "cameliaarmory:item/wooden_pike_base"
   },
-  "perspectives": {
-    "gui": {
-      "parent": "cameliaarmory:item/wooden_pike_gui"
+    "perspectives": {
+        "gui": {
+            "parent": "cameliaarmory:item/wooden_pike_gui"
+        },
+        "ground": {
+            "parent": "cameliaarmory:item/wooden_pike_gui"
+        },
+        "fixed": {
+            "parent": "cameliaarmory:item/wooden_pike_gui"
+        }
     }
-  }
 }

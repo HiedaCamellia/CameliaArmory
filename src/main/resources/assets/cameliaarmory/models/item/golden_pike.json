@@ -4,9 +4,15 @@
   "base": {
     "parent": "cameliaarmory:item/golden_pike_base"
   },
-  "perspectives": {
-    "gui": {
-      "parent": "cameliaarmory:item/golden_pike_gui"
+    "perspectives": {
+        "gui": {
+            "parent": "cameliaarmory:item/golden_pike_gui"
+        },
+        "ground": {
+            "parent": "cameliaarmory:item/golden_pike_gui"
+        },
+        "fixed": {
+            "parent": "cameliaarmory:item/golden_pike_gui"
+        }
     }
-  }
 }

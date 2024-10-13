@@ -4,9 +4,15 @@
   "base": {
     "parent": "cameliaarmory:item/netherite_zweihander_base"
   },
-  "perspectives": {
-    "gui": {
-      "parent": "cameliaarmory:item/netherite_zweihander_gui"
+    "perspectives": {
+        "gui": {
+            "parent": "cameliaarmory:item/netherite_zweihander_gui"
+        },
+        "ground": {
+            "parent": "cameliaarmory:item/netherite_zweihander_gui"
+        },
+        "fixed": {
+            "parent": "cameliaarmory:item/netherite_zweihander_gui"
+        }
     }
-  }
 }

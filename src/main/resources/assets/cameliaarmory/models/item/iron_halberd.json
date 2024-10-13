@@ -4,9 +4,15 @@
   "base": {
     "parent": "cameliaarmory:item/iron_halberd_base"
   },
-  "perspectives": {
-    "gui": {
-      "parent": "cameliaarmory:item/iron_halberd_gui"
+    "perspectives": {
+        "gui": {
+            "parent": "cameliaarmory:item/iron_halberd_gui"
+        },
+        "ground": {
+            "parent": "cameliaarmory:item/iron_halberd_gui"
+        },
+        "fixed": {
+            "parent": "cameliaarmory:item/iron_halberd_gui"
+        }
     }
-  }
 }

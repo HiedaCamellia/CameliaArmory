@@ -4,9 +4,15 @@
   "base": {
     "parent": "cameliaarmory:item/stone_claymore_base"
   },
-  "perspectives": {
-    "gui": {
-      "parent": "cameliaarmory:item/stone_claymore_gui"
+    "perspectives": {
+        "gui": {
+            "parent": "cameliaarmory:item/stone_claymore_gui"
+        },
+        "ground": {
+            "parent": "cameliaarmory:item/stone_claymore_gui"
+        },
+        "fixed": {
+            "parent": "cameliaarmory:item/stone_claymore_gui"
+        }
     }
-  }
 }

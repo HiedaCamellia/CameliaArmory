@@ -4,9 +4,15 @@
   "base": {
     "parent": "cameliaarmory:item/netherite_scythe_base"
   },
-  "perspectives": {
-    "gui": {
-      "parent": "cameliaarmory:item/netherite_scythe_gui"
+    "perspectives": {
+        "gui": {
+            "parent": "cameliaarmory:item/netherite_scythe_gui"
+        },
+        "ground": {
+            "parent": "cameliaarmory:item/netherite_scythe_gui"
+        },
+        "fixed": {
+            "parent": "cameliaarmory:item/netherite_scythe_gui"
+        }
     }
-  }
 }

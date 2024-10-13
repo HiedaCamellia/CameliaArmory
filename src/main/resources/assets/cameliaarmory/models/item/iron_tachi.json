@@ -4,9 +4,15 @@
   "base": {
     "parent": "cameliaarmory:item/iron_tachi_base"
   },
-  "perspectives": {
-    "gui": {
-      "parent": "cameliaarmory:item/iron_tachi_gui"
+    "perspectives": {
+        "gui": {
+            "parent": "cameliaarmory:item/iron_tachi_gui"
+        },
+        "ground": {
+            "parent": "cameliaarmory:item/iron_tachi_gui"
+        },
+        "fixed": {
+            "parent": "cameliaarmory:item/iron_tachi_gui"
+        }
     }
-  }
 }
