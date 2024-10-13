@@ -54,7 +54,7 @@ public class CAItem {
 
     public static DeferredItem<SwordItemWithTooltip> WOODEN_CLUB = ITEMS.register("wooden_club", () -> new SwordItemWithTooltip(Tiers.WOOD,new  Item.Properties().attributes(SwordItem.createAttributes(Tiers.WOOD, 5, -3.2F)).stacksTo(1).durability(59)));
     public static DeferredItem<SwordItemWithTooltip> STUDDED_CLUB = ITEMS.register("studded_club", () -> new SwordItemWithTooltip(Tiers.STONE,new  Item.Properties().attributes(interactionRange(0.3)).attributes(SwordItem.createAttributes(Tiers.STONE, 6, -3.2F)).stacksTo(1).durability(131)));
-    public static Map<String, DeferredItem<SwordItemWithTooltip>> SPINY_MAUL = tiers.subList(2, 5).stream()
+    public static Map<String, DeferredItem<SwordItemWithTooltip>> SPINY_MAUL = tiers.subList(2, 6).stream()
             .collect(Collectors.toMap(s -> s, s -> ITEMS.register(s + "_spiny_maul", () -> new SwordItemWithTooltip(getTier(s),new Item.Properties().attributes(interactionRange(0.7)).attributes(SwordItem.createAttributes(getTier(s), 5+getDamageBoost(s), -3.15F)).stacksTo(1).durability(getDurability(s))))));
 
     public static Map<String, DeferredItem<SwordItemWithTooltip>> TACHI = tiers.stream()
