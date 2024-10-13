@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:netherite_ingot"
+  },
+  "base": {
+    "item": "cameliaarmory:diamond_throwing_axe"
+  },
+  "result": {
+    "count": 1,
+    "id": "cameliaarmory:netherite_throwing_axe"
+  },
+  "template": {
+    "item": "minecraft:netherite_upgrade_smithing_template"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    "TTS",
+    " ST",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "cameliaarmory:wooden_lucerne_hammer"
+  }
+}

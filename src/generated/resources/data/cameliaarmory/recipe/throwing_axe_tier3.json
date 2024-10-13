@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "F": {
+      "item": "minecraft:string"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    "FTT",
+    " ST",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "cameliaarmory:golden_throwing_axe"
+  }
+}

@@ -78,7 +78,7 @@ public class CAItem {
 
     public static DeferredItem<SwordItemWithTooltip> KOMACHI_SCYTHE = ITEMS.register("komachi_scythe", () -> new SwordItemWithTooltip(Tiers.WOOD,new  Item.Properties().attributes(interactionRange(0.8)).attributes(SwordItem.createAttributes(Tiers.NETHERITE, 10, -2.4F)).stacksTo(1).durability(2031)));
     public static DeferredItem<SwordItemWithTooltip> LONG_STICK = ITEMS.register("long_stick", () -> new SwordItemWithTooltip(Tiers.WOOD,new  Item.Properties().attributes(interactionRange(1.5)).attributes(SwordItem.createAttributes(Tiers.WOOD, 3.5F, -2.4F)).stacksTo(1).durability(59)));
-    public static DeferredItem<SwordItemWithTooltip> MACUAHUITL = ITEMS.register("macuahuitl", () -> new SwordItemWithTooltip(Tiers.WOOD,new  Item.Properties().attributes(interactionRange(0.5)).attributes(SwordItem.createAttributes(Tiers.IRON, 6.5F, -2.4F)).stacksTo(1).durability(250)));
+    public static DeferredItem<SwordItemWithTooltip> MACUAHUITL = ITEMS.register("macuahuitl", () -> new SwordItemWithTooltip(Tiers.WOOD,new  Item.Properties().attributes(interactionRange(0.5)).attributes(SwordItem.createAttributes(Tiers.IRON, 6.5F, -2.4F)).stacksTo(1).durability(1052)));
 
     public static DeferredItem<Item> ENGLAND_LONGBOW = SPECIAL.registerItem("england_longbow", (i) -> new BowItemWithTootip(
             new  Item.Properties().attributes(attackSpeed(-0.8)).attributes(interactionRange(0.5)).stacksTo(1).durability(384)));
@@ -128,11 +128,11 @@ public class CAItem {
     }
 
     public static ItemAttributeModifiers interactionRange(double amount){
-        return ItemAttributeModifiers.builder().add(Attributes.BLOCK_INTERACTION_RANGE, new AttributeModifier(ResourceLocation.fromNamespaceAndPath(CameliaArmory.MODID, "block_interaction_range"),amount, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND).build();
+        return ItemAttributeModifiers.builder().add(Attributes.BLOCK_INTERACTION_RANGE, new AttributeModifier(CameliaArmory.perfix("block_interaction_range"),amount, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND).build();
     }
 
     public static ItemAttributeModifiers attackSpeed(double amount){
-        return ItemAttributeModifiers.builder().add(Attributes.ATTACK_SPEED, new AttributeModifier(ResourceLocation.fromNamespaceAndPath(CameliaArmory.MODID, "attack_speed"),amount, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HAND).build();
+        return ItemAttributeModifiers.builder().add(Attributes.ATTACK_SPEED, new AttributeModifier(CameliaArmory.perfix("attack_speed"),amount, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HAND).build();
     }
 
 }

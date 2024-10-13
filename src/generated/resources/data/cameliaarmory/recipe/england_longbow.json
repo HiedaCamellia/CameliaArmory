@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    " ST",
+    "S T",
+    "ST "
+  ],
+  "result": {
+    "count": 1,
+    "id": "cameliaarmory:england_longbow"
+  }
+}

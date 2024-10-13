@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    " ST",
+    "SS ",
+    "S  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "cameliaarmory:diamond_pike"
+  }
+}

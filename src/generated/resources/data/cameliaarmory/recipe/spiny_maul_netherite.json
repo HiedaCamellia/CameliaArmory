@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:netherite_ingot"
+  },
+  "base": {
+    "item": "cameliaarmory:diamond_spiny_maul"
+  },
+  "result": {
+    "count": 1,
+    "id": "cameliaarmory:netherite_spiny_maul"
+  },
+  "template": {
+    "item": "minecraft:netherite_upgrade_smithing_template"
+  }
+}

@@ -113,9 +113,10 @@ dependencies {
     jarJar(group: 'org.hiedacamellia', name: 'camellialib', version: '[0.0.4,)')
 
     implementation files("libs/camellialib-1.21.1-0.0.4.jar")
-    implementation "curse.maven:better-combat-by-daedelus-639842:5723092"
-    implementation "curse.maven:playeranimator-658587:5698755"
-    implementation "curse.maven:cloth-config-348521:5729127"
+    runtimeOnly"curse.maven:better-combat-by-daedelus-639842:5723092"
+    runtimeOnly "curse.maven:playeranimator-658587:5698755"
+    runtimeOnly "curse.maven:cloth-config-348521:5729127"
+    runtimeOnly "curse.maven:jei-238222:5802637"
 
 }
 
