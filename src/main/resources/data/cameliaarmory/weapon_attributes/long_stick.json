@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "cameliaarmory:item/long_stick"
+  "parent": "bettercombat:battlestaff",
+  "attributes": {
+    "attack_range": 4.5
   }
 }

@@ -1,3 +1,6 @@
 {
-  "parent": "bettercombat:katana"
+  "parent": "bettercombat:katana",
+  "attributes": {
+    "attack_range": 3
+  }
 }
