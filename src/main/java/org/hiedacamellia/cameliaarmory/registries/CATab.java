@@ -17,8 +17,8 @@ public class CATab {
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> WG_TAB = TABS.register("cameliaarmory", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.cameliaarmory")).withTabsBefore(CreativeModeTabs.COMBAT).icon(CAItem.YUMI::toStack)
             .displayItems((parameters, output) -> {
-                CAItem.ITEMS.getEntries().forEach(holder -> output.accept(holder.get()));
                 CAItem.ITEM_WITH_GUI.getEntries().forEach(holder -> output.accept(holder.get()));
+                CAItem.ITEMS.getEntries().forEach(holder -> output.accept(holder.get()));
                 CAItem.SPECIAL.getEntries().forEach(holder -> output.accept(holder.get()));
             }).build());
 
