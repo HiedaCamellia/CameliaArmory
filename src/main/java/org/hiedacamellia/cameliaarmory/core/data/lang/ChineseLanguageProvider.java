@@ -36,7 +36,7 @@ public class ChineseLanguageProvider extends CamelliaLanguageProvider {
 
         addWithTooltip(CAItem.KOMACHI_SCYTHE.toStack(),"\u5c0f\u91ce\u585a\u7684\u9570\u5200","");
         addWithTooltip(CAItem.LONG_STICK.toStack(),"\u957f\u68cd","");
-        addWithTooltip(CAItem.MACUAHUITL.toStack(),"\u952f\u5251","");
+        addWithTooltip(CAItem.MACUAHUITL.toStack(),"\u9a6c\u5938\u5a01\u7279","");
         addWithTooltip(CAItem.ENGLAND_LONGBOW.toStack(),"\u82f1\u683c\u5170\u957f\u5f13","");
         addWithTooltip(CAItem.YUMI.toStack(),"\u548c\u5f13","");
 
