@@ -110,9 +110,9 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 dependencies {
 
-    jarJar(group: 'org.hiedacamellia', name: 'camellialib', version: '[0.0.7,)')
+    jarJar(group: 'org.hiedacamellia', name: 'camellialib', version: '[0.0.8,)')
 
-    implementation files("libs/camellialib-1.21.1-0.0.7.jar")
+    implementation files("libs/camellialib-1.21.1-0.0.8.jar")
     runtimeOnly"curse.maven:better-combat-by-daedelus-639842:5723092"
     runtimeOnly "curse.maven:playeranimator-658587:5698755"
     runtimeOnly "curse.maven:cloth-config-348521:5729127"
