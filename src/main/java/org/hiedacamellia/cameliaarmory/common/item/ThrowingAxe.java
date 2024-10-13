@@ -12,7 +12,6 @@ import net.minecraft.world.item.Tier;
 import net.minecraft.world.level.Level;
 import org.hiedacamellia.cameliaarmory.common.entity.ThrowingAxeEntity;
 import org.hiedacamellia.cameliaarmory.registries.CAEntity;
-import org.hiedacamellia.camellialib.common.entity.ThrowableItemEntity;
 import org.hiedacamellia.camellialib.common.item.AxeItemWithTooltip;
 
 public class ThrowingAxe extends AxeItemWithTooltip implements ProjectileItem {

@@ -4,8 +4,10 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import org.hiedacamellia.cameliaarmory.registries.CAEntity;
+import org.hiedacamellia.cameliaarmory.registries.CAItem;
 import org.hiedacamellia.camellialib.common.entity.ThrowableItemEntity;
 
 public class ThrowingAxeEntity extends ThrowableItemEntity {
@@ -18,5 +20,9 @@ public class ThrowingAxeEntity extends ThrowableItemEntity {
 
     public ThrowingAxeEntity(LivingEntity shooter, Level level) {
         super(CAEntity.THROWING_AXE.get(), shooter, level);
+    }
+    @Override
+    protected Item getDefaultItem() {
+        return CAItem.THROWING_AXE.get("iron").get();
     }
 }

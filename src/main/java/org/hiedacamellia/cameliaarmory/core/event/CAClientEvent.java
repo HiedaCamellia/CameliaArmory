@@ -1,5 +1,6 @@
 package org.hiedacamellia.cameliaarmory.core.event;
 
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -12,7 +13,7 @@ import org.hiedacamellia.camellialib.client.render.ThrowableItemRender;
 public class CAClientEvent {
     @SubscribeEvent
     public static void onClientSetup(EntityRenderersEvent.RegisterRenderers event) {
-        event.registerEntityRenderer(CAEntity.THROWING_KNIFE.get(), ThrowableItemRender::new);
-        event.registerEntityRenderer(CAEntity.THROWING_AXE.get(), ThrowableItemRender::new);
+        event.registerEntityRenderer(CAEntity.THROWING_KNIFE.get(), ThrownItemRenderer::new);
+        event.registerEntityRenderer(CAEntity.THROWING_AXE.get(), ThrownItemRenderer::new);
     }
 }
