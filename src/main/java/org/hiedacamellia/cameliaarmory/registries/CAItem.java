@@ -13,6 +13,8 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.hiedacamellia.cameliaarmory.CameliaArmory;
+import org.hiedacamellia.cameliaarmory.common.item.EnglandLongbow;
+import org.hiedacamellia.cameliaarmory.common.item.Yumi;
 import org.hiedacamellia.camellialib.common.item.BowItemWithTootip;
 import org.hiedacamellia.camellialib.common.item.SwordItemWithTooltip;
 
@@ -80,10 +82,8 @@ public class CAItem {
     public static DeferredItem<SwordItemWithTooltip> LONG_STICK = ITEMS.register("long_stick", () -> new SwordItemWithTooltip(Tiers.WOOD,new  Item.Properties().attributes(interactionRange(1.5)).attributes(SwordItem.createAttributes(Tiers.WOOD, 3.5F, -2.4F)).stacksTo(1).durability(59)));
     public static DeferredItem<SwordItemWithTooltip> MACUAHUITL = ITEMS.register("macuahuitl", () -> new SwordItemWithTooltip(Tiers.WOOD,new  Item.Properties().attributes(interactionRange(0.5)).attributes(SwordItem.createAttributes(Tiers.IRON, 6.5F, -2.4F)).stacksTo(1).durability(1052)));
 
-    public static DeferredItem<Item> ENGLAND_LONGBOW = SPECIAL.registerItem("england_longbow", (i) -> new BowItemWithTootip(
-            new  Item.Properties().attributes(attackSpeed(-0.8)).attributes(interactionRange(0.5)).stacksTo(1).durability(384)));
-    public static DeferredItem<Item> YUMI = SPECIAL.registerItem("yumi", (i) -> new BowItemWithTootip(
-            new  Item.Properties().attributes(attackSpeed(-1)).attributes(interactionRange(0.5)).stacksTo(1).durability(384)));
+    public static DeferredItem<BowItemWithTootip> ENGLAND_LONGBOW = SPECIAL.register("england_longbow", EnglandLongbow::new);
+    public static DeferredItem<BowItemWithTootip> YUMI = SPECIAL.register("yumi", Yumi::new);
 
     public static void registry(IEventBus modEventBug) {
         ITEMS.register(modEventBug);
