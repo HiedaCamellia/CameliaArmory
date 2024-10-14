@@ -2,8 +2,10 @@ package org.hiedacamellia.cameliaarmory.common.item;
 
 import net.minecraft.core.Direction;
 import net.minecraft.core.Position;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.ItemStack;
@@ -27,11 +29,14 @@ public class ThrowingAxe extends AxeItemWithTooltip implements ProjectileItem {
             ThrowingAxeEntity throwableItemEntity = new ThrowingAxeEntity(CAEntity.THROWING_AXE.get(), level);
             throwableItemEntity.setItem(itemStack);
             throwableItemEntity.setOwner(player);
-            throwableItemEntity.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 1.5F, 1.0F);
+            throwableItemEntity.setPos(player.getX(),player.getY()+player.getEyeHeight(),player.getZ());
+            throwableItemEntity.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 3F, 1.0F);
             level.addFreshEntity(throwableItemEntity);
+            if(player instanceof ServerPlayer serverPlayer)
+                itemStack.hurtAndBreak(1,serverPlayer, EquipmentSlot.MAINHAND);
         }
-        itemStack.consume(1,player);
-        return InteractionResultHolder.consume(itemStack);
+        player.getCooldowns().addCooldown(this, 20);
+        return InteractionResultHolder.success(itemStack);
     }
 
     @Override

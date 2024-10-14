@@ -23,11 +23,6 @@ public class ThrowingKnifeEntity extends ThrowableItemEntity {
     public ThrowingKnifeEntity(LivingEntity shooter, Level level) {
         super(CAEntity.THROWING_KNIFE.get(), shooter, level);
     }
-//    @Override
-//    public void onHit(HitResult result){
-//        CamelliaDebug.send("onHit"+this.position());
-//    }
-
 
     @Override
     protected Item getDefaultItem() {
