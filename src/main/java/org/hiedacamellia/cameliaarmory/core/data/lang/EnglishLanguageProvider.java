@@ -1,9 +1,13 @@
 package org.hiedacamellia.cameliaarmory.core.data.lang;
 
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import org.hiedacamellia.cameliaarmory.CameliaArmory;
 import org.hiedacamellia.cameliaarmory.registries.CAItem;
 import org.hiedacamellia.camellialib.core.data.lang.CamelliaLanguageProvider;
+import org.jetbrains.annotations.Nullable;
 
 public class EnglishLanguageProvider extends CamelliaLanguageProvider {
     public EnglishLanguageProvider(PackOutput output) {
