@@ -11,6 +11,7 @@ import org.hiedacamellia.cameliaarmory.core.data.provider.CARecipeProvider;
 
 @Mod.EventBusSubscriber(modid = CameliaArmory.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class CAData {
+
     @SubscribeEvent
     public static void onGatherData(GatherDataEvent event) {
         var gen = event.getGenerator();
@@ -21,4 +22,5 @@ public class CAData {
         gen.addProvider(event.includeClient(), new CAItemModelProvider(packOutput, helper));
         gen.addProvider(event.includeServer(), new CARecipeProvider(packOutput));
     }
+
 }
