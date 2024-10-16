@@ -4,9 +4,9 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import net.neoforged.neoforge.registries.DeferredHolder;
+import net.minecraftforge.client.model.generators.ItemModelProvider;
+import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.RegistryObject;
 import org.hiedacamellia.cameliaarmory.CameliaArmory;
 import org.hiedacamellia.cameliaarmory.registries.CAItem;
 
@@ -34,10 +34,10 @@ public class CAItemModelProvider extends ItemModelProvider {
     }
 
     public Iterable<Item> getKnownItems() {
-        return CAItem.ITEMS.getEntries().stream().map(DeferredHolder::get).collect(Collectors.toSet());
+        return CAItem.ITEMS.getEntries().stream().map(RegistryObject::get).collect(Collectors.toSet());
     }
 
     public Iterable<Item> getKnownGuiItems() {
-        return CAItem.ITEM_WITH_GUI.getEntries().stream().map(DeferredHolder::get).collect(Collectors.toSet());
+        return CAItem.ITEM_WITH_GUI.getEntries().stream().map(RegistryObject::get).collect(Collectors.toSet());
     }
 }

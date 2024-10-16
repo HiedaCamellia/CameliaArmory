@@ -6,9 +6,12 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.item.ArrowItem;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
-import net.neoforged.neoforge.event.EventHooks;
+import net.minecraftforge.event.ForgeEventFactory;
 import org.hiedacamellia.camellialib.common.item.BowItemWithTootip;
 
 import java.util.List;
@@ -23,20 +26,20 @@ public class EnglandLongbow extends BowItemWithTootip {
         if (entityLiving instanceof Player player) {
             ItemStack itemstack = player.getProjectile(stack);
             if (!itemstack.isEmpty()) {
-                int i = this.getUseDuration(stack, entityLiving) - timeLeft;
-                i = EventHooks.onArrowLoose(stack, level, player, i, !itemstack.isEmpty());
+                int i = this.getUseDuration(stack) - timeLeft;
+                i = ForgeEventFactory.onArrowLoose(stack, level, player, i, !itemstack.isEmpty());
                 if (i < 0) {
                     return;
                 }
 
                 float f = getPowerForTime(i);
                 if (!((double)f < 0.1)) {
-                    List<ItemStack> list = draw(stack, itemstack, player);
                     if (level instanceof ServerLevel) {
                         ServerLevel serverlevel = (ServerLevel)level;
-                        if (!list.isEmpty()) {
-                            this.shoot(serverlevel, player, player.getUsedItemHand(), stack, list, f * 4.0F, 1.0F, f == 1.0F, (LivingEntity)null);
-                        }
+                        ArrowItem arrowitem = (ArrowItem)(itemstack.getItem() instanceof ArrowItem ? itemstack.getItem() : Items.ARROW);
+                        AbstractArrow abstractarrow = arrowitem.createArrow(serverlevel, itemstack, player);
+                        abstractarrow = customArrow(abstractarrow);
+                        abstractarrow.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, f * 4.0F, 1.0F);
                     }
 
                     level.playSound((Player)null, player.getX(), player.getY(), player.getZ(), SoundEvents.ARROW_SHOOT, SoundSource.PLAYERS, 1.0F, 1.0F / (level.getRandom().nextFloat() * 0.4F + 1.2F) + f * 0.5F);

@@ -13,33 +13,32 @@ public class EnglishLanguageProvider extends CamelliaLanguageProvider {
     @Override
     protected void addTranslations() {
         CAItem.tiers.forEach((tier) -> {
-            addWithTooltip(CAItem.BASTARD_SWORD.get(tier).toStack(),getTierTrans(tier)+"Bastard Sword","");
-            addWithTooltip(CAItem.CLAYMORE.get(tier).toStack(),getTierTrans(tier)+"Claymore","");
-            addWithTooltip(CAItem.HALBERD.get(tier).toStack(),getTierTrans(tier)+"Halberd","");
-            addWithTooltip(CAItem.HENGDAO.get(tier).toStack(),getTierTrans(tier)+"Hengdao","");
-            addWithTooltip(CAItem.LUCERNE_HAMMER.get(tier).toStack(),getTierTrans(tier)+"Lucerne Hammer","");
-            addWithTooltip(CAItem.PIKE.get(tier).toStack(),getTierTrans(tier)+"Pike","");
-            addWithTooltip(CAItem.SCYTHE.get(tier).toStack(),getTierTrans(tier)+"Scythe","");
-            addWithTooltip(CAItem.SPEAR.get(tier).toStack(),getTierTrans(tier)+"Spear","");
-            addWithTooltip(CAItem.TACHI.get(tier).toStack(),getTierTrans(tier)+"Tachi","");
-            addWithTooltip(CAItem.THROWING_AXE.get(tier).toStack(),getTierTrans(tier)+"Throwing Axe","");
-            addWithTooltip(CAItem.THROWING_KNIFE.get(tier).toStack(),getTierTrans(tier)+"Throwing Knife","");
-            addWithTooltip(CAItem.UCHIGATANA.get(tier).toStack(),getTierTrans(tier)+"Uchigatana","");
-            addWithTooltip(CAItem.WAKIZASHI.get(tier).toStack(),getTierTrans(tier)+"Wakizashi","");
-            addWithTooltip(CAItem.ZWEIHANDER.get(tier).toStack(),getTierTrans(tier)+"Zweihander","");
+            addWithTooltip(CAItem.BASTARD_SWORD.get(tier).get(),getTierTrans(tier)+"Bastard Sword","");
+            addWithTooltip(CAItem.CLAYMORE.get(tier).get(),getTierTrans(tier)+"Claymore","");
+            addWithTooltip(CAItem.HALBERD.get(tier).get(),getTierTrans(tier)+"Halberd","");
+            addWithTooltip(CAItem.HENGDAO.get(tier).get(),getTierTrans(tier)+"Hengdao","");
+            addWithTooltip(CAItem.LUCERNE_HAMMER.get(tier).get(),getTierTrans(tier)+"Lucerne Hammer","");
+            addWithTooltip(CAItem.PIKE.get(tier).get(),getTierTrans(tier)+"Pike","");
+            addWithTooltip(CAItem.SCYTHE.get(tier).get(),getTierTrans(tier)+"Scythe","");
+            addWithTooltip(CAItem.SPEAR.get(tier).get(),getTierTrans(tier)+"Spear","");
+            addWithTooltip(CAItem.TACHI.get(tier).get(),getTierTrans(tier)+"Tachi","");
+            addWithTooltip(CAItem.THROWING_AXE.get(tier).get(),getTierTrans(tier)+"Throwing Axe","");
+            addWithTooltip(CAItem.THROWING_KNIFE.get(tier).get(),getTierTrans(tier)+"Throwing Knife","");
+            addWithTooltip(CAItem.UCHIGATANA.get(tier).get(),getTierTrans(tier)+"Uchigatana","");
+            addWithTooltip(CAItem.WAKIZASHI.get(tier).get(),getTierTrans(tier)+"Wakizashi","");
+            addWithTooltip(CAItem.ZWEIHANDER.get(tier).get(),getTierTrans(tier)+"Zweihander","");
         });
-        addWithTooltip(CAItem.WOODEN_CLUB.toStack(),"Wooden Club","");
-        addWithTooltip(CAItem.STUDDED_CLUB.toStack(),"Studded Club","");
-        CAItem.tiers.subList(2, 5).forEach((tier) -> addWithTooltip(CAItem.SPINY_MAUL.get(tier).toStack(),getTierTrans(tier)+"Spiny Maul",""));
+        addWithTooltip(CAItem.WOODEN_CLUB.get(),"Wooden Club","");
+        addWithTooltip(CAItem.STUDDED_CLUB.get(),"Studded Club","");
+        CAItem.tiers.subList(2, 5).forEach((tier) -> addWithTooltip(CAItem.SPINY_MAUL.get(tier).get(),getTierTrans(tier)+"Spiny Maul",""));
 
-        addWithTooltip(CAItem.KOMACHI_SCYTHE.toStack(),"Komachi's Scythe","");
-        addWithTooltip(CAItem.LONG_STICK.toStack(),"Long stick","");
-        addWithTooltip(CAItem.MACUAHUITL.toStack(),"Macuahuitl","");
-        addWithTooltip(CAItem.ENGLAND_LONGBOW.toStack(),"England LongBow","");
-        addWithTooltip(CAItem.YUMI.toStack(),"Yumi","");
+        addWithTooltip(CAItem.KOMACHI_SCYTHE.get(),"Komachi's Scythe","");
+        addWithTooltip(CAItem.LONG_STICK.get(),"Long stick","");
+        addWithTooltip(CAItem.MACUAHUITL.get(),"Macuahuitl","");
+        addWithTooltip(CAItem.ENGLAND_LONGBOW.get(),"England LongBow","");
+        addWithTooltip(CAItem.YUMI.get(),"Yumi","");
 
         add("itemGroup.cameliaarmory","Camelia Armory");
-
     }
 
 

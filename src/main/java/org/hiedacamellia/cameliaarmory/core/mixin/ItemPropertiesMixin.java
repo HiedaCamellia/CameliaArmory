@@ -13,28 +13,28 @@ import org.spongepowered.asm.mixin.injection.Inject;
 public class ItemPropertiesMixin {
 
     static {
-        ItemProperties.register(CAItem.YUMI.get(), ResourceLocation.withDefaultNamespace("pull"), (p_344163_, p_344164_, p_344165_, p_344166_) -> {
+        ItemProperties.register(CAItem.YUMI.get(), new ResourceLocation("pull"), (p_344163_, p_344164_, p_344165_, p_344166_) -> {
             if (p_344165_ == null) {
                 return 0.0F;
             } else {
-                return p_344165_.getUseItem() != p_344163_ ? 0.0F : (float)(p_344163_.getUseDuration(p_344165_) - p_344165_.getUseItemRemainingTicks()) / 25.0F;
+                return p_344165_.getUseItem() != p_344163_ ? 0.0F : (float)(p_344163_.getUseDuration() - p_344165_.getUseItemRemainingTicks()) / 25.0F;
             }
         });
         ItemProperties.register(
                 CAItem.YUMI.get(),
-                ResourceLocation.withDefaultNamespace("pulling"),
+                new ResourceLocation("pulling"),
                 (p_174630_, p_174631_, p_174632_, p_174633_) -> p_174632_ != null && p_174632_.isUsingItem() && p_174632_.getUseItem() == p_174630_ ? 1.0F : 0.0F
         );
-        ItemProperties.register(CAItem.ENGLAND_LONGBOW.get(), ResourceLocation.withDefaultNamespace("pull"), (p_344163_, p_344164_, p_344165_, p_344166_) -> {
+        ItemProperties.register(CAItem.ENGLAND_LONGBOW.get(), new ResourceLocation("pull"), (p_344163_, p_344164_, p_344165_, p_344166_) -> {
             if (p_344165_ == null) {
                 return 0.0F;
             } else {
-                return p_344165_.getUseItem() != p_344163_ ? 0.0F : (float)(p_344163_.getUseDuration(p_344165_) - p_344165_.getUseItemRemainingTicks()) / 24.0F;
+                return p_344165_.getUseItem() != p_344163_ ? 0.0F : (float)(p_344163_.getUseDuration() - p_344165_.getUseItemRemainingTicks()) / 24.0F;
             }
         });
         ItemProperties.register(
                 CAItem.ENGLAND_LONGBOW.get(),
-                ResourceLocation.withDefaultNamespace("pulling"),
+                new ResourceLocation("pulling"),
                 (p_174630_, p_174631_, p_174632_, p_174633_) -> p_174632_ != null && p_174632_.isUsingItem() && p_174632_.getUseItem() == p_174630_ ? 1.0F : 0.0F
         );
 
