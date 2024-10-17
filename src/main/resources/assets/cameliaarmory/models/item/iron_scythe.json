@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
-  "loader": "neoforge:separate_transforms",
+  "loader": "forge:separate_transforms",
   "base": {
     "parent": "cameliaarmory:item/iron_scythe_base"
   },

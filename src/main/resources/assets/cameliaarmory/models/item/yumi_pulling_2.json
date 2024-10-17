@@ -1,6 +1,6 @@
 {
-    "parent": "neoforge:item/default",
-    "loader": "neoforge:separate_transforms",
+    "parent": "forge:item/default",
+    "loader": "forge:separate_transforms",
     "base": {
         "parent": "cameliaarmory:item/yumi_base_pulling_2"
     },

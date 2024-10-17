@@ -135,13 +135,28 @@ repositories {
     flatDir(
             dirs: "libs"
     )
+    maven {
+        url = "https://cursemaven.com"
+    }
+    maven {
+        name = "Modrinth"
+        url = uri("https://api.modrinth.com/maven")
+        content {
+            includeGroup("maven.modrinth")
+        }
+    }
 }
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     jarJar(group: 'org.hiedacamellia', name: 'camellialib', version: '[0.0.9,)')
 
-    implementation files("libs/camellialib-1.20.1-0.0.9.jar")
+    //implementation fg.deobf("curse.maven:camellialib-1121564:5813724")
+    implementation fg.deobf('maven.modrinth:camellialib:0.0.13')
+    //runtimeOnly("curse.maven:jei-238222:5793297")
+    runtimeOnly("curse.maven:playeranimator-658587:4587215")
+    // runtimeOnly("curse.maven:better-combat-by-daedelus-639842:5266159")
+    runtimeOnly("curse.maven:cloth-config-348521:5729105")
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
 

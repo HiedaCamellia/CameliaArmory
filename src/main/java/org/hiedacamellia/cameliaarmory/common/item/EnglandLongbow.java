@@ -23,6 +23,7 @@ public class EnglandLongbow extends BowItemWithTootip {
 
     @Override
     public void releaseUsing(ItemStack stack, Level level, LivingEntity entityLiving, int timeLeft) {
+        super.releaseUsing(stack, level, entityLiving, timeLeft);
         if (entityLiving instanceof Player player) {
             ItemStack itemstack = player.getProjectile(stack);
             if (!itemstack.isEmpty()) {

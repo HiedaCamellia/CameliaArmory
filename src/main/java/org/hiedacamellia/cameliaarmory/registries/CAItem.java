@@ -27,56 +27,56 @@ public class CAItem {
 
     public static final List<String> tiers = List.of("wooden", "stone", "iron", "golden", "diamond", "netherite");
     public static Map<String, RegistryObject<Item>> BASTARD_SWORD = tiers.stream()
-            .collect(Collectors.toMap(s -> s, s -> ITEMS.register(s + "_bastard_sword", () -> new SwordItemWithTooltip(getTier(s), (int) getTier(s).getAttackDamageBonus(), getTier(s).getSpeed(), new Item.Properties().stacksTo(1).durability(getDurability(s))))));
+            .collect(Collectors.toMap(s -> s, s -> ITEMS.register(s + "_bastard_sword", () -> new SwordItemWithTooltip(getTier(s), 4+getDamageBoost(s), 1.6f - 4, new Item.Properties().stacksTo(1).durability(getDurability(s))))));
 
     public static Map<String, RegistryObject<Item>> CLAYMORE = tiers.stream()
-            .collect(Collectors.toMap(s -> s, s -> ITEM_WITH_GUI.register(s + "_claymore", () -> new SwordItemWithTooltip(getTier(s), (int) getTier(s).getAttackDamageBonus(), getTier(s).getSpeed(), new Item.Properties().stacksTo(1).durability(getDurability(s))))));
+            .collect(Collectors.toMap(s -> s, s -> ITEM_WITH_GUI.register(s + "_claymore", () -> new SwordItemWithTooltip(getTier(s), 5+getDamageBoost(s), 1.3f - 4, new Item.Properties().stacksTo(1).durability(getDurability(s))))));
 
     public static Map<String, RegistryObject<Item>> HALBERD = tiers.stream()
-            .collect(Collectors.toMap(s -> s, s -> ITEM_WITH_GUI.register(s + "_halberd", () -> new SwordItemWithTooltip(getTier(s), (int) getTier(s).getAttackDamageBonus(), getTier(s).getSpeed(), new Item.Properties().stacksTo(1).durability(getDurability(s))))));
+            .collect(Collectors.toMap(s -> s, s -> ITEM_WITH_GUI.register(s + "_halberd", () -> new SwordItemWithTooltip(getTier(s), 5+getDamageBoost(s), 1.6f - 4, new Item.Properties().stacksTo(1).durability(getDurability(s))))));
 
     public static Map<String, RegistryObject<Item>> HENGDAO = tiers.stream()
-            .collect(Collectors.toMap(s -> s, s -> ITEMS.register(s + "_hengdao", () -> new SwordItemWithTooltip(getTier(s), (int) getTier(s).getAttackDamageBonus(), getTier(s).getSpeed(), new Item.Properties().stacksTo(1).durability(getDurability(s))))));
+            .collect(Collectors.toMap(s -> s, s -> ITEMS.register(s + "_hengdao", () -> new SwordItemWithTooltip(getTier(s), 5+getDamageBoost(s), 1.6f - 4, new Item.Properties().stacksTo(1).durability(getDurability(s))))));
 
     public static Map<String, RegistryObject<Item>> LUCERNE_HAMMER = tiers.stream()
-            .collect(Collectors.toMap(s -> s, s -> ITEM_WITH_GUI.register(s + "_lucerne_hammer", () -> new SwordItemWithTooltip(getTier(s), (int) getTier(s).getAttackDamageBonus(), getTier(s).getSpeed(), new Item.Properties().stacksTo(1).durability(getDurability(s))))));
+            .collect(Collectors.toMap(s -> s, s -> ITEM_WITH_GUI.register(s + "_lucerne_hammer", () -> new SwordItemWithTooltip(getTier(s), 8+getDamageBoost(s), 0.9f - 4, new Item.Properties().stacksTo(1).durability(getDurability(s))))));
 
     public static Map<String, RegistryObject<Item>> PIKE = tiers.stream()
-            .collect(Collectors.toMap(s -> s, s -> ITEM_WITH_GUI.register(s + "_pike", () -> new SwordItemWithTooltip(getTier(s), (int) getTier(s).getAttackDamageBonus(), getTier(s).getSpeed(), new Item.Properties().stacksTo(1).durability(getDurability(s))))));
+            .collect(Collectors.toMap(s -> s, s -> ITEM_WITH_GUI.register(s + "_pike", () -> new SwordItemWithTooltip(getTier(s), 4+getDamageBoost(s), 0.7f - 4, new Item.Properties().stacksTo(1).durability(getDurability(s))))));
 
     public static Map<String, RegistryObject<Item>> SCYTHE = tiers.stream()
-            .collect(Collectors.toMap(s -> s, s -> ITEM_WITH_GUI.register(s + "_scythe", () -> new SwordItemWithTooltip(getTier(s), (int) getTier(s).getAttackDamageBonus(), getTier(s).getSpeed(), new Item.Properties().stacksTo(1).durability(getDurability(s))))));
+            .collect(Collectors.toMap(s -> s, s -> ITEM_WITH_GUI.register(s + "_scythe", () -> new SwordItemWithTooltip(getTier(s), 5+getDamageBoost(s), 1.1f - 4, new Item.Properties().stacksTo(1).durability(getDurability(s))))));
 
     public static Map<String, RegistryObject<Item>> SPEAR = tiers.stream()
-            .collect(Collectors.toMap(s -> s, s -> ITEM_WITH_GUI.register(s + "_spear", () -> new SwordItemWithTooltip(getTier(s), (int) getTier(s).getAttackDamageBonus(), getTier(s).getSpeed(), new Item.Properties().stacksTo(1).durability(getDurability(s))))));
+            .collect(Collectors.toMap(s -> s, s -> ITEM_WITH_GUI.register(s + "_spear", () -> new SwordItemWithTooltip(getTier(s), 4+getDamageBoost(s), 1.2f - 4, new Item.Properties().stacksTo(1).durability(getDurability(s))))));
 
-    public static RegistryObject<Item> WOODEN_CLUB = ITEMS.register("wooden_club", () -> new SwordItemWithTooltip(Tiers.WOOD, (int) Tiers.WOOD.getAttackDamageBonus(), Tiers.WOOD.getSpeed(), new Item.Properties().stacksTo(1).durability(59)));
-    public static RegistryObject<Item> STUDDED_CLUB = ITEMS.register("studded_club", () -> new SwordItemWithTooltip(Tiers.STONE, (int) Tiers.STONE.getAttackDamageBonus(), Tiers.STONE.getSpeed(), new Item.Properties().stacksTo(1).durability(131)));
+    public static RegistryObject<Item> WOODEN_CLUB = ITEMS.register("wooden_club", () -> new SwordItemWithTooltip(Tiers.WOOD, 5, 0.8f - 4, new Item.Properties().stacksTo(1).durability(59)));
+    public static RegistryObject<Item> STUDDED_CLUB = ITEMS.register("studded_club", () -> new SwordItemWithTooltip(Tiers.STONE, 6, 0.8f - 4, new Item.Properties().stacksTo(1).durability(131)));
     public static Map<String, RegistryObject<Item>> SPINY_MAUL = tiers.subList(2, 6).stream()
-            .collect(Collectors.toMap(s -> s, s -> ITEMS.register(s + "_spiny_maul", () -> new SwordItemWithTooltip(getTier(s), (int) getTier(s).getAttackDamageBonus(), getTier(s).getSpeed(), new Item.Properties().stacksTo(1).durability(getDurability(s))))));
+            .collect(Collectors.toMap(s -> s, s -> ITEMS.register(s + "_spiny_maul", () -> new SwordItemWithTooltip(getTier(s), 5+getDamageBoost(s), 0.85f - 4, new Item.Properties().stacksTo(1).durability(getDurability(s))))));
 
     public static Map<String, RegistryObject<Item>> TACHI = tiers.stream()
-            .collect(Collectors.toMap(s -> s, s -> ITEM_WITH_GUI.register(s + "_tachi", () -> new SwordItemWithTooltip(getTier(s), (int) getTier(s).getAttackDamageBonus(), getTier(s).getSpeed(), new Item.Properties().stacksTo(1).durability(getDurability(s))))));
+            .collect(Collectors.toMap(s -> s, s -> ITEM_WITH_GUI.register(s + "_tachi", () -> new SwordItemWithTooltip(getTier(s), 5+getDamageBoost(s), 1.3f - 4, new Item.Properties().stacksTo(1).durability(getDurability(s))))));
 
     public static Map<String, RegistryObject<Item>> THROWING_AXE = tiers.stream()
-            .collect(Collectors.toMap(s -> s, s -> ITEMS.register(s + "_throwing_axe", () -> new ThrowingAxe(getTier(s), (int) getTier(s).getAttackDamageBonus(), getTier(s).getSpeed(), new Item.Properties().stacksTo(1).durability(getDurability(s))))));
+            .collect(Collectors.toMap(s -> s, s -> ITEMS.register(s + "_throwing_axe", () -> new ThrowingAxe(getTier(s), 8+getDamageBoost(s), 1f - 4, new Item.Properties().stacksTo(1).durability(getDurability(s))))));
 
     public static Map<String, RegistryObject<Item>> THROWING_KNIFE = tiers.stream()
-            .collect(Collectors.toMap(s -> s, s -> ITEMS.register(s + "_throwing_knife", () -> new ThrowingKnife(getTier(s), (int) getTier(s).getAttackDamageBonus(), getTier(s).getSpeed(), new Item.Properties().stacksTo(1).durability(getDurability(s))))));
+            .collect(Collectors.toMap(s -> s, s -> ITEMS.register(s + "_throwing_knife", () -> new ThrowingKnife(getTier(s), 3+getDamageBoost(s), 1f - 4, new Item.Properties().stacksTo(1).durability(getDurability(s))))));
 
     public static Map<String, RegistryObject<Item>> UCHIGATANA = tiers.stream()
-            .collect(Collectors.toMap(s -> s, s -> ITEMS.register(s + "_uchigatana", () -> new SwordItemWithTooltip(getTier(s), (int) getTier(s).getAttackDamageBonus(), getTier(s).getSpeed(), new Item.Properties().stacksTo(1).durability(getDurability(s))))));
+            .collect(Collectors.toMap(s -> s, s -> ITEMS.register(s + "_uchigatana", () -> new SwordItemWithTooltip(getTier(s), 4+getDamageBoost(s), 1.8f - 4, new Item.Properties().stacksTo(1).durability(getDurability(s))))));
 
     public static Map<String, RegistryObject<Item>> WAKIZASHI = tiers.stream()
-            .collect(Collectors.toMap(s -> s, s -> ITEMS.register(s + "_wakizashi", () -> new SwordItemWithTooltip(getTier(s), (int) getTier(s).getAttackDamageBonus(), getTier(s).getSpeed(), new Item.Properties().stacksTo(1).durability(getDurability(s))))));
+            .collect(Collectors.toMap(s -> s, s -> ITEMS.register(s + "_wakizashi", () -> new SwordItemWithTooltip(getTier(s), 3+getDamageBoost(s), 2f - 4, new Item.Properties().stacksTo(1).durability(getDurability(s))))));
 
     public static Map<String, RegistryObject<Item>> ZWEIHANDER = tiers.stream()
-            .collect(Collectors.toMap(s -> s, s -> ITEM_WITH_GUI.register(s + "_zweihander", () -> new SwordItemWithTooltip(getTier(s), (int) getTier(s).getAttackDamageBonus(), getTier(s).getSpeed(), new Item.Properties().stacksTo(1).durability(getDurability(s))))));
+            .collect(Collectors.toMap(s -> s, s -> ITEM_WITH_GUI.register(s + "_zweihander", () -> new SwordItemWithTooltip(getTier(s), 5+getDamageBoost(s), 1.1f - 4, new Item.Properties().stacksTo(1).durability(getDurability(s))))));
 
 
-    public static RegistryObject<Item> KOMACHI_SCYTHE = ITEMS.register("komachi_scythe", () -> new SwordItemWithTooltip(Tiers.WOOD, (int) Tiers.WOOD.getAttackDamageBonus(), Tiers.WOOD.getSpeed(), new Item.Properties().stacksTo(1).durability(2031)));
-    public static RegistryObject<Item> LONG_STICK = ITEMS.register("long_stick", () -> new SwordItemWithTooltip(Tiers.WOOD, (int) Tiers.WOOD.getAttackDamageBonus(), Tiers.WOOD.getSpeed(), new Item.Properties().stacksTo(1).durability(59)));
-    public static RegistryObject<Item> MACUAHUITL = ITEMS.register("macuahuitl", () -> new SwordItemWithTooltip(Tiers.WOOD, (int) Tiers.WOOD.getAttackDamageBonus(), Tiers.WOOD.getSpeed(), new Item.Properties().stacksTo(1).durability(1052)));
+    public static RegistryObject<Item> KOMACHI_SCYTHE = ITEMS.register("komachi_scythe", () -> new SwordItemWithTooltip(Tiers.WOOD, 10, 1.6f - 4, new Item.Properties().stacksTo(1).durability(2031)));
+    public static RegistryObject<Item> LONG_STICK = ITEMS.register("long_stick", () -> new SwordItemWithTooltip(Tiers.WOOD, 3, 1.6f - 4, new Item.Properties().stacksTo(1).durability(59)));
+    public static RegistryObject<Item> MACUAHUITL = ITEMS.register("macuahuitl", () -> new SwordItemWithTooltip(Tiers.WOOD, 6, 1.6f - 4, new Item.Properties().stacksTo(1).durability(1052)));
 
     public static RegistryObject<BowItemWithTootip> ENGLAND_LONGBOW = SPECIAL.register("england_longbow", EnglandLongbow::new);
     public static RegistryObject<BowItemWithTootip> YUMI = SPECIAL.register("yumi", Yumi::new);
@@ -99,14 +99,14 @@ public class CAItem {
         };
     }
 
-    public static float getDamageBoost(String tier) {
+    public static int getDamageBoost(String tier) {
         return switch (tier) {
             case "wooden" -> 0;
             case "stone" -> 1;
             case "iron" -> 2;
-            case "golden" -> 1.5F;
+            case "golden" -> 2;
             case "diamond" -> 3;
-            case "netherite" -> 3.5F;
+            case "netherite" -> 4;
             default -> 0;
         };
     }
