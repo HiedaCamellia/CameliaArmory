@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    " T ",
+    "S T",
+    "S  "
+  ],
+  "result": {
+    "item": "cameliaarmory:iron_scythe"
+  },
+  "show_notification": true
+}

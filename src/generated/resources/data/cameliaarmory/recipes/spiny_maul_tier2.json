@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    " ST",
+    " ST",
+    " S "
+  ],
+  "result": {
+    "item": "cameliaarmory:iron_spiny_maul"
+  },
+  "show_notification": true
+}

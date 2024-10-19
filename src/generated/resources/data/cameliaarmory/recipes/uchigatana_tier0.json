@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    "   ",
+    " TT",
+    "S  "
+  ],
+  "result": {
+    "item": "cameliaarmory:wooden_uchigatana"
+  },
+  "show_notification": true
+}

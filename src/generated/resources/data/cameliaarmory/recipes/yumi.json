@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "L": {
+      "tag": "minecraft:logs"
+    },
+    "S": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    "S  ",
+    "LS ",
+    "S  "
+  ],
+  "result": {
+    "item": "cameliaarmory:yumi"
+  },
+  "show_notification": true
+}

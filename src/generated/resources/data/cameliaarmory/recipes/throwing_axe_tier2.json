@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "F": {
+      "item": "minecraft:string"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "FTT",
+    " ST",
+    " S "
+  ],
+  "result": {
+    "item": "cameliaarmory:iron_throwing_axe"
+  },
+  "show_notification": true
+}

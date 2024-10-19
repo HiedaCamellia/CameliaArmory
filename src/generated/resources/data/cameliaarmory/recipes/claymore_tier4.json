@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    " T ",
+    "ST ",
+    " S "
+  ],
+  "result": {
+    "item": "cameliaarmory:diamond_claymore"
+  },
+  "show_notification": true
+}

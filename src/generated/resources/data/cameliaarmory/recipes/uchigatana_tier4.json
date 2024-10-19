@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    "   ",
+    " TT",
+    "S  "
+  ],
+  "result": {
+    "item": "cameliaarmory:diamond_uchigatana"
+  },
+  "show_notification": true
+}
