@@ -16,6 +16,7 @@ import org.hiedacamellia.cameliaarmory.common.item.EnglandLongbow;
 import org.hiedacamellia.cameliaarmory.common.item.ThrowingAxe;
 import org.hiedacamellia.cameliaarmory.common.item.ThrowingKnife;
 import org.hiedacamellia.cameliaarmory.common.item.Yumi;
+import org.hiedacamellia.camellialib.common.item.AxeItemWithTooltip;
 import org.hiedacamellia.camellialib.common.item.BowItemWithTootip;
 import org.hiedacamellia.camellialib.common.item.ItemWithTooltip;
 import org.hiedacamellia.camellialib.common.item.SwordItemWithTooltip;
@@ -48,13 +49,13 @@ public class CAItem {
             .collect(Collectors.toMap(s -> s, s -> ITEM_WITH_GUI.register(s + "_lucerne_hammer", () -> new SwordItemWithTooltip(getTier(s),new Item.Properties().attributes(interactionRange(1.4)).attributes(SwordItem.createAttributes(getTier(s),8F+ getDamageBoost(s), -3.1F)).stacksTo(1).durability(getDurability(s))))));
 
     public static Map<String,DeferredItem<Item>> PIKE = tiers.stream()
-            .collect(Collectors.toMap(s -> s, s -> ITEM_WITH_GUI.register(s + "_pike", () -> new SwordItemWithTooltip(getTier(s),new Item.Properties().attributes(interactionRange(3.7)).attributes(SwordItem.createAttributes(getTier(s), 4.5F+getDamageBoost(s), -3.3F)).stacksTo(1).durability(getDurability(s))))));
+            .collect(Collectors.toMap(s -> s, s -> ITEM_WITH_GUI.register(s + "_pike", () -> new AxeItemWithTooltip(getTier(s),new Item.Properties().attributes(interactionRange(3.7)).attributes(SwordItem.createAttributes(getTier(s), 4.5F+getDamageBoost(s), -3.3F)).stacksTo(1).durability(getDurability(s))))));
 
     public static Map<String,DeferredItem<Item>> SCYTHE = tiers.stream()
             .collect(Collectors.toMap(s -> s, s -> ITEM_WITH_GUI.register(s + "_scythe", () -> new SwordItemWithTooltip(getTier(s),new Item.Properties().attributes(sweepingDamageRatio(0.6)).attributes(interactionRange(0.8)).attributes(SwordItem.createAttributes(getTier(s),5+ getDamageBoost(s), -2.9F)).stacksTo(1).durability(getDurability(s))))));
 
     public static Map<String,DeferredItem<Item>> SPEAR = tiers.stream()
-            .collect(Collectors.toMap(s -> s, s -> ITEM_WITH_GUI.register(s + "_spear", () -> new SwordItemWithTooltip(getTier(s),new Item.Properties().attributes(interactionRange(1.7)).attributes(SwordItem.createAttributes(getTier(s), 4+getDamageBoost(s), -2.8F)).stacksTo(1).durability(getDurability(s))))));
+            .collect(Collectors.toMap(s -> s, s -> ITEM_WITH_GUI.register(s + "_spear", () -> new AxeItemWithTooltip(getTier(s),new Item.Properties().attributes(interactionRange(1.7)).attributes(SwordItem.createAttributes(getTier(s), 4+getDamageBoost(s), -2.8F)).stacksTo(1).durability(getDurability(s))))));
 
     public static DeferredItem<Item> WOODEN_CLUB = ITEMS.register("wooden_club", () -> new SwordItemWithTooltip(Tiers.WOOD,new  Item.Properties().attributes(SwordItem.createAttributes(Tiers.WOOD, 5, -3.2F)).stacksTo(1).durability(59)));
     public static DeferredItem<Item> STUDDED_CLUB = ITEMS.register("studded_club", () -> new SwordItemWithTooltip(Tiers.STONE,new  Item.Properties().attributes(interactionRange(0.3)).attributes(SwordItem.createAttributes(Tiers.STONE, 6, -3.2F)).stacksTo(1).durability(131)));
@@ -81,8 +82,8 @@ public class CAItem {
 
 
     public static DeferredItem<Item> KOMACHI_SCYTHE = ITEMS.register("komachi_scythe", () -> new SwordItemWithTooltip(Tiers.WOOD,new  Item.Properties().attributes(interactionRange(0.8)).attributes(SwordItem.createAttributes(Tiers.NETHERITE, 10, -2.4F)).stacksTo(1).durability(2031)));
-    public static DeferredItem<Item> LONG_STICK = ITEMS.register("long_stick", () -> new SwordItemWithTooltip(Tiers.WOOD,new  Item.Properties().attributes(interactionRange(1.5)).attributes(SwordItem.createAttributes(Tiers.WOOD, 3.5F, -2.4F)).stacksTo(1).durability(59)));
-    public static DeferredItem<Item> MACUAHUITL = ITEMS.register("macuahuitl", () -> new SwordItemWithTooltip(Tiers.WOOD,new  Item.Properties().attributes(interactionRange(0.5)).attributes(SwordItem.createAttributes(Tiers.IRON, 6.5F, -2.4F)).stacksTo(1).durability(1052)));
+    public static DeferredItem<Item> LONG_STICK = ITEMS.register("long_stick", () -> new AxeItemWithTooltip(Tiers.WOOD,new  Item.Properties().attributes(interactionRange(1.5)).attributes(SwordItem.createAttributes(Tiers.WOOD, 3.5F, -2.4F)).stacksTo(1).durability(59)));
+    public static DeferredItem<Item> MACUAHUITL = ITEMS.register("macuahuitl", () -> new AxeItemWithTooltip(Tiers.WOOD,new  Item.Properties().attributes(interactionRange(0.5)).attributes(SwordItem.createAttributes(Tiers.IRON, 6.5F, -2.4F)).stacksTo(1).durability(1052)));
 
     public static DeferredItem<BowItemWithTootip> ENGLAND_LONGBOW = SPECIAL.register("england_longbow", EnglandLongbow::new);
     public static DeferredItem<BowItemWithTootip> YUMI = SPECIAL.register("yumi", Yumi::new);
@@ -106,15 +107,16 @@ public class CAItem {
     }
     
     public static float getDamageBoost(String tier){
-        return switch (tier) {
-            case "wooden" -> 0;
-            case "stone" -> 1;
-            case "iron" -> 2;
-            case "golden" -> 1.5F;
-            case "diamond" -> 3;
-            case "netherite" -> 3.5F;
-            default -> 0;
-        };
+        return 0;
+//        return switch (tier) {
+//            case "wooden" -> 0;
+//            case "stone" -> 1;
+//            case "iron" -> 2;
+//            case "golden" -> 1.5F;
+//            case "diamond" -> 3;
+//            case "netherite" -> 3.5F;
+//            default -> 0;
+//        };
     }
     
     public static Tier getTier(String tier){

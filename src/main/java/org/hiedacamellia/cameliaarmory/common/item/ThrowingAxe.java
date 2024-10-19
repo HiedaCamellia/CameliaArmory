@@ -3,8 +3,11 @@ package org.hiedacamellia.cameliaarmory.common.item;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Position;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
@@ -25,23 +28,24 @@ public class ThrowingAxe extends AxeItemWithTooltip implements ProjectileItem {
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand interactionHand) {
         ItemStack itemStack = player.getItemInHand(interactionHand);
+        ThrowingAxeEntity throwableItemEntity = new ThrowingAxeEntity(player,level,itemStack);
         if (!level.isClientSide) {
-            ThrowingAxeEntity throwableItemEntity = new ThrowingAxeEntity(CAEntity.THROWING_AXE.get(), level);
-            throwableItemEntity.setItem(itemStack);
-            throwableItemEntity.setOwner(player);
-            throwableItemEntity.setPos(player.getX(),player.getY()+player.getEyeHeight(),player.getZ());
-            throwableItemEntity.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 3F, 1.0F);
-            level.addFreshEntity(throwableItemEntity);
             if(player instanceof ServerPlayer serverPlayer)
                 itemStack.hurtAndBreak(1,serverPlayer, EquipmentSlot.MAINHAND);
+            throwableItemEntity.setItem(itemStack);
+            throwableItemEntity.setOwner(player);
+            throwableItemEntity.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 3F, 1.0F);
+            level.addFreshEntity(throwableItemEntity);
         }
+        level.playSound(player,throwableItemEntity,SoundEvents.TRIDENT_THROW.value(),SoundSource.PLAYERS,1.0F,1.0F);
         player.getCooldowns().addCooldown(this, 20);
-        return InteractionResultHolder.success(itemStack);
+        itemStack.consume(1,player);
+        return InteractionResultHolder.consume(itemStack);
     }
 
     @Override
     public Projectile asProjectile(Level level, Position position, ItemStack itemStack, Direction direction) {
-        ThrowingAxeEntity throwableItemEntity = new ThrowingAxeEntity(position.x(),position.y(),position.z(),level);
+        ThrowingAxeEntity throwableItemEntity = new ThrowingAxeEntity(position.x(),position.y(),position.z(),level,itemStack);
         throwableItemEntity.setItem(itemStack);
         return throwableItemEntity;
     }

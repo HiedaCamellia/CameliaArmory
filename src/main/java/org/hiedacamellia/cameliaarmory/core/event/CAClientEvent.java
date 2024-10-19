@@ -7,12 +7,13 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import org.hiedacamellia.cameliaarmory.CameliaArmory;
 import org.hiedacamellia.cameliaarmory.registries.CAEntity;
+import org.hiedacamellia.camellialib.client.render.ThrowableRenderer;
 
 @EventBusSubscriber(modid = CameliaArmory.MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class CAClientEvent {
     @SubscribeEvent
     public static void onClientSetup(EntityRenderersEvent.RegisterRenderers event) {
-        event.registerEntityRenderer(CAEntity.THROWING_KNIFE.get(), ThrownItemRenderer::new);
-        event.registerEntityRenderer(CAEntity.THROWING_AXE.get(), ThrownItemRenderer::new);
+        event.registerEntityRenderer(CAEntity.THROWING_KNIFE.get(), ThrowableRenderer::new);
+        event.registerEntityRenderer(CAEntity.THROWING_AXE.get(), ThrowableRenderer::new);
     }
 }
