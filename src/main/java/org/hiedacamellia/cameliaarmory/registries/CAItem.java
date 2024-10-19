@@ -43,7 +43,7 @@ public class CAItem {
             .collect(Collectors.toMap(s -> s, s -> ITEMS.register(s + "_hengdao", () -> new SwordItemWithTooltip(getTier(s),new Item.Properties().attributes(sweepingDamageRatio(0.4)).attributes(SwordItem.createAttributes(getTier(s), 5+getDamageBoost(s), -2.4F)).stacksTo(1).durability(getDurability(s))))));
 
     public static Map<String,DeferredItem<Item>> LUCERNE_HAMMER = tiers.stream()
-            .collect(Collectors.toMap(s -> s, s -> ITEM_WITH_GUI.register(s + "_lucerne_hammer", () -> new SwordItemWithTooltip(getTier(s),new Item.Properties().attributes(interactionRange(1.4)).attributes(SwordItem.createAttributes(getTier(s),8F+ getDamageBoost(s), -3.1F)).stacksTo(1).durability(getDurability(s))))));
+            .collect(Collectors.toMap(s -> s, s -> ITEM_WITH_GUI.register(s + "_lucerne_hammer", () -> new LucerneHammerItemWithTooltip(40,getTier(s),new Item.Properties().attributes(interactionRange(1.4)).attributes(SwordItem.createAttributes(getTier(s),8F+ getDamageBoost(s), -3.1F)).stacksTo(1).durability(getDurability(s))))));
 
     public static Map<String,DeferredItem<Item>> PIKE = tiers.stream()
             .collect(Collectors.toMap(s -> s, s -> ITEM_WITH_GUI.register(s + "_pike", () -> new SpearItemWithTooltip(20,getTier(s),new Item.Properties().attributes(interactionRange(3.7)).attributes(SwordItem.createAttributes(getTier(s), 4.5F+getDamageBoost(s), -3.3F)).stacksTo(1).durability(getDurability(s))))));

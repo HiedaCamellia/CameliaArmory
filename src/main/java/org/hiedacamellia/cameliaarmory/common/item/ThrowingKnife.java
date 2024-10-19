@@ -2,7 +2,6 @@ package org.hiedacamellia.cameliaarmory.common.item;
 
 import net.minecraft.core.Direction;
 import net.minecraft.core.Position;
-import net.minecraft.core.component.DataComponents;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -15,9 +14,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ProjectileItem;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.level.Level;
-import org.hiedacamellia.cameliaarmory.common.entity.ThrowingAxeEntity;
 import org.hiedacamellia.cameliaarmory.common.entity.ThrowingKnifeEntity;
-import org.hiedacamellia.cameliaarmory.registries.CAEntity;
 import org.hiedacamellia.camellialib.common.item.SwordItemWithTooltip;
 
 public class ThrowingKnife extends SwordItemWithTooltip implements ProjectileItem {
