@@ -30,7 +30,7 @@ public class ThrowingKnife extends SwordItemWithTooltip implements ProjectileIte
         if (!level.isClientSide) {
             if(player instanceof ServerPlayer serverPlayer)
                 itemStack.hurtAndBreak(1,serverPlayer, EquipmentSlot.MAINHAND);
-            throwableItemEntity.setItem(itemStack);
+            throwableItemEntity.setItem(itemStack.copy());
             throwableItemEntity.setOwner(player);
             throwableItemEntity.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 3F, 1.0F);
             level.addFreshEntity(throwableItemEntity);

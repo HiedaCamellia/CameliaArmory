@@ -49,7 +49,7 @@ public class CAItem {
             .collect(Collectors.toMap(s -> s, s -> ITEM_WITH_GUI.register(s + "_pike", () -> new SpearItemWithTooltip(20,getTier(s),new Item.Properties().attributes(interactionRange(3.7)).attributes(SwordItem.createAttributes(getTier(s), 4.5F+getDamageBoost(s), -3.3F)).stacksTo(1).durability(getDurability(s))))));
 
     public static Map<String,DeferredItem<Item>> SCYTHE = tiers.stream()
-            .collect(Collectors.toMap(s -> s, s -> ITEM_WITH_GUI.register(s + "_scythe", () -> new SwordItemWithTooltip(getTier(s),new Item.Properties().attributes(sweepingDamageRatio(0.6)).attributes(interactionRange(0.8)).attributes(SwordItem.createAttributes(getTier(s),5+ getDamageBoost(s), -2.9F)).stacksTo(1).durability(getDurability(s))))));
+            .collect(Collectors.toMap(s -> s, s -> ITEM_WITH_GUI.register(s + "_scythe", () -> new ScytheItemWithTooltip(getTier(s),new Item.Properties().attributes(sweepingDamageRatio(0.6)).attributes(interactionRange(0.8)).attributes(SwordItem.createAttributes(getTier(s),5+ getDamageBoost(s), -2.9F)).stacksTo(1).durability(getDurability(s))))));
 
     public static Map<String,DeferredItem<Item>> SPEAR = tiers.stream()
             .collect(Collectors.toMap(s -> s, s -> ITEM_WITH_GUI.register(s + "_spear", () -> new SpearItemWithTooltip(10,getTier(s),new Item.Properties().attributes(interactionRange(1.7)).attributes(SwordItem.createAttributes(getTier(s), 4+getDamageBoost(s), -2.8F)).stacksTo(1).durability(getDurability(s))))));
@@ -78,7 +78,7 @@ public class CAItem {
             .collect(Collectors.toMap(s -> s, s -> ITEM_WITH_GUI.register(s + "_zweihander", () -> new SwordItemWithTooltip(getTier(s),new Item.Properties().attributes(sweepingDamageRatio(0.3)).attributes(interactionRange(1)).attributes(SwordItem.createAttributes(getTier(s), 5.5F+getDamageBoost(s), -2.9F)).stacksTo(1).durability(getDurability(s))))));
 
 
-    public static DeferredItem<Item> KOMACHI_SCYTHE = ITEMS.register("komachi_scythe", () -> new SwordItemWithTooltip(Tiers.WOOD,new  Item.Properties().attributes(interactionRange(0.8)).attributes(SwordItem.createAttributes(Tiers.NETHERITE, 10, -2.4F)).stacksTo(1).durability(2031)));
+    public static DeferredItem<Item> KOMACHI_SCYTHE = ITEMS.register("komachi_scythe", () -> new ScytheItemWithTooltip(Tiers.WOOD,new  Item.Properties().attributes(interactionRange(0.8)).attributes(SwordItem.createAttributes(Tiers.NETHERITE, 10, -2.4F)).stacksTo(1).durability(2031)));
     public static DeferredItem<Item> LONG_STICK = ITEMS.register("long_stick", () -> new AxeItemWithTooltip(Tiers.WOOD,new  Item.Properties().attributes(interactionRange(1.5)).attributes(SwordItem.createAttributes(Tiers.WOOD, 3.5F, -2.4F)).stacksTo(1).durability(59)));
     public static DeferredItem<Item> MACUAHUITL = ITEMS.register("macuahuitl", () -> new AxeItemWithTooltip(Tiers.WOOD,new  Item.Properties().attributes(interactionRange(0.5)).attributes(SwordItem.createAttributes(Tiers.IRON, 6.5F, -2.4F)).stacksTo(1).durability(1052)));
 
