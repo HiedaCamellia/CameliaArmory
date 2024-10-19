@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    " ST",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "item": "cameliaarmory:wooden_halberd"
+  },
+  "show_notification": true
+}

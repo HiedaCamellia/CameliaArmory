@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "F": {
+      "item": "minecraft:string"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "minecraft:cobblestone"
+    }
+  },
+  "pattern": [
+    " T ",
+    "FT ",
+    " S "
+  ],
+  "result": {
+    "item": "cameliaarmory:stone_zweihander"
+  },
+  "show_notification": true
+}

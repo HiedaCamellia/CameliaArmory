@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "pattern": [
+    "TST",
+    "TST",
+    " S "
+  ],
+  "result": {
+    "item": "cameliaarmory:macuahuitl"
+  },
+  "show_notification": true
+}

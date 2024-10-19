@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "TTS",
+    " ST",
+    " S "
+  ],
+  "result": {
+    "item": "cameliaarmory:iron_lucerne_hammer"
+  },
+  "show_notification": true
+}

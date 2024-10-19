@@ -1,0 +1,41 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_stick": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:stick"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe_tier0": {
+      "conditions": {
+        "recipe": "cameliaarmory:bastard_sword_tier0"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_the_recipe_tier1": {
+      "conditions": {
+        "recipe": "cameliaarmory:bastard_sword_tier1"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_stick",
+      "has_the_recipe_tier0"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "cameliaarmory:bastard_sword_tier1"
+    ]
+  },
+  "sends_telemetry_event": false
+}

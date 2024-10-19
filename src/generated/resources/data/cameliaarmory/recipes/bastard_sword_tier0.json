@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    "  T",
+    " ST",
+    "S  "
+  ],
+  "result": {
+    "item": "cameliaarmory:wooden_bastard_sword"
+  },
+  "show_notification": true
+}

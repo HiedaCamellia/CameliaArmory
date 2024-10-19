@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "minecraft:cobblestone"
+    }
+  },
+  "pattern": [
+    "T  ",
+    " T ",
+    " SS"
+  ],
+  "result": {
+    "item": "cameliaarmory:stone_hengdao"
+  },
+  "show_notification": true
+}

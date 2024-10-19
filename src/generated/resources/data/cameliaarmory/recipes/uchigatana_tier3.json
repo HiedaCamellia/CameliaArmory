@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    "   ",
+    " TT",
+    "S  "
+  ],
+  "result": {
+    "item": "cameliaarmory:golden_uchigatana"
+  },
+  "show_notification": true
+}

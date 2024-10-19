@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    " T ",
+    "S T",
+    "S  "
+  ],
+  "result": {
+    "item": "cameliaarmory:wooden_scythe"
+  },
+  "show_notification": true
+}

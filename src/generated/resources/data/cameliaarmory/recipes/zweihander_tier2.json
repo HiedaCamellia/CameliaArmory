@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "F": {
+      "item": "minecraft:string"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    " T ",
+    "FT ",
+    " S "
+  ],
+  "result": {
+    "item": "cameliaarmory:iron_zweihander"
+  },
+  "show_notification": true
+}
