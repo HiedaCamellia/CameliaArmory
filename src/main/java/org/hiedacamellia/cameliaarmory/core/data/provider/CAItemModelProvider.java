@@ -21,14 +21,14 @@ public class CAItemModelProvider extends ItemModelProvider {
         this.getKnownItems().forEach((item) -> {
             if (!(item instanceof BlockItem)) {
                 String path = BuiltInRegistries.ITEM.getKey(item).getPath();
-                this.singleTexture(path, this.mcLoc("item/generated"), "layer0", this.modLoc("item/" + path));
+                this.singleTexture(path, this.mcLoc("cameliaarmory:item/base"), "layer0", this.modLoc("item/" + path));
             }
         });
         this.getKnownGuiItems().forEach((item) -> {
             if (!(item instanceof BlockItem)) {
                 String path = BuiltInRegistries.ITEM.getKey(item).getPath();
-                this.singleTexture(path + "_gui", this.mcLoc("item/generated"), "layer0", this.modLoc("item/" + path + "_gui"));
-                this.singleTexture(path + "_base", this.mcLoc("item/generated"), "layer0", this.modLoc("item/" + path));
+                this.singleTexture(path + "_gui", this.mcLoc("cameliaarmory:item/base"), "layer0", this.modLoc("item/" + path + "_gui"));
+                this.singleTexture(path + "_base", this.mcLoc("cameliaarmory:item/base"), "layer0", this.modLoc("item/" + path));
             }
         });
     }
