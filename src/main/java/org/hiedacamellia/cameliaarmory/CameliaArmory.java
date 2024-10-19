@@ -6,6 +6,7 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import org.hiedacamellia.cameliaarmory.registries.CAEntity;
 import org.hiedacamellia.cameliaarmory.registries.CAItem;
+import org.hiedacamellia.cameliaarmory.registries.CAMobEffect;
 import org.hiedacamellia.cameliaarmory.registries.CATab;
 
 @Mod(CameliaArmory.MODID)
@@ -16,6 +17,7 @@ public class CameliaArmory {
         CAItem.registry(modEventBus);
         CATab.registry(modEventBus);
         CAEntity.register(modEventBus);
+        CAMobEffect.register(modEventBus);
     }
 
     public static ResourceLocation perfix(String path) {
